@@ -19,13 +19,14 @@ y_alfa_norm = [max(abs(y_(:, 1)))/imp_factor; max(abs(y_(:, 2))) ];
 
 e = (y_-ym) ./ y_alfa_norm';                               % residual (error)
 
+% fit_alpha = 100 * (1 - norm(y_(:,1) - ym(:,1)) / norm(y_(:,1) - mean(y_(:,1))));
+% fit_omega = 100 * (1 - norm(y_(:,2) - ym(:,2)) / norm(y_(:,2) - mean(y_(:,2))));
+% fprintf('Fit: alpha = %.2f%%, omega = %.2f%%\n', fit_alpha, fit_omega);
 
 
 if (false)
-    fit_alpha = 100 * (1 - norm(y_(:,1) - ym(:,1)) / norm(y_(:,1) - mean(y_(:,1))));
-    fit_omega = 100 * (1 - norm(y_(:,2) - ym(:,2)) / norm(y_(:,2) - mean(y_(:,2))));
-    fprintf('Fit: alpha = %.2f%%, omega = %.2f%%\n', fit_alpha, fit_omega);
-end
+
+    
 if (false)
     figure(1)
     subplot(2,1,1)

@@ -75,6 +75,12 @@ K1i = -10.3;
 % K2i = -350;
 K3i = 0.1;
 K4i = 2.42;
+
+bi_vals  = [2.45];
+K1i_vals = [-10];
+K3i_vals = [0.1];
+K4i_vals = [1/0.7];
+
 thetai = [bi, K1i, K3i, K4i];
 
 for i =1:2
@@ -92,3 +98,4 @@ thetahat, fval
 function f_u = get_f_u(x)
 f_u = 2.5*100*x*x - 5.8*100*x- 7.5;
 end
+

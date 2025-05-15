@@ -37,6 +37,19 @@ plot(fan1_voltage__, fan1_omega__, '-o');
 title('XD');
 hold off;
 
+
+fan1_voltage_n = -[-1, -0.6, -0.2, 0];
+fan1_omega_n = [352, 266, 128, 0];
+
+
+figure;
+hold on;
+plot(fan1_voltage_n, fan1_omega_n, '-o');
+
+title('XD_negative');
+hold off;
+
+
 % omega:
 % radians/s 
 
