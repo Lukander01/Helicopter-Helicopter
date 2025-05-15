@@ -9,19 +9,18 @@ assignin('base','K4',x(4));
 
 [tm,xm,ym]=sim('helicopter_hat',U_cost(:,1),[],U_cost);  % simulate nonlinear model
 
-size(ym)
-
+% size(ym)
 %size(y)
 
 y_alfa = y(1).Data;
 y_omega = y(2).Data;
 y_ = [y_alfa, y_omega];
 
-size(y_)
+% size(y_)
 
-y_alfa_norm = [max(abs(y_(:, 1))); max(abs(y_(:, 2))) ];
+y_alfa_norm = [max(abs(y_(:, 1)))/10; max(abs(y_(:, 2))) ];
 
-size(y_alfa_norm)
+% size(y_alfa_norm)
 
 e = (y_-ym) ./ y_alfa_norm';                               % residual (error)
 % e = (y_-ym);
