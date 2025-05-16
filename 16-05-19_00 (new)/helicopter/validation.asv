@@ -1,0 +1,88 @@
+clear all
+close all
+clc
+
+
+% % Positive input
+% b = 0.026;
+% K1 = -10.58;
+% K3 = 0.000;
+% K4 = 5.38;
+
+
+% Negative input
+b = 0.2399;
+K1 = -10.5488;
+K3 = 0.0001;
+K4 = 4.5944;
+
+
+% Signal
+x0 = [0;0;0]; % initial state
+
+T = 40;    % length of experiment
+h = 0.01;   % sampling interval
+%ts = 10;    % estimated settling time of the process
+A = 0.07;      % amplitude of GBN
+%U = [h*(0:T/h)' gbn(T,ts,A,h,1)];
+t = 0:h:T;
+freq = 1; 
+%U = sin(freq*t)*A + -0.6;
+U = -0.7*ones(length(t),1)'; %-0.7 + sin(t*2*pi*freq)*A;
+timeser = timeseries(U,t);
+
+U_cost = [t', U'];
+
+% Offset aproxiamtion
+
+T = 2;
+
+t_offs = 0:h:T;
+U_offs = zeros(size(t_offs));
+timeser = timeseries(U_offs, t_offs);
+sim('helicoptertemplate');
+%y_offset = simOut.yout;
+%size(y_offset)
+
+y_offset = [alpha; omega];
+
+T = 40;
+
+
+%[tm_real,xm_real,ym_real]=sim('helicoptertemplate',U_cost(:,1),[],U_cost);
+sim('helicoptertemplate');
+
+y = [alpha - mean(y_offset(1,:)); omega - mean(y_offset(2,:))];
+%%
+y_alfa_real = y(1).Data;
+y_omega_real = y(2).Data;
+
+[tm_sim,xm_sim,ym_sim]=sim('helicopter_hat',U_cost(:,1),[],U_cost);
+
+y_ = [y_alfa_real, y_omega_real];
+ym = ym_sim;
+
+
+% e = (y_-ym);
+
+
+if (true)
+    fit_alpha = 100 * (1 - norm(y_(:,1) - ym(:,1)) / norm(y_(:,1) - mean(y_(:,1))));
+    fit_omega = 100 * (1 - norm(y_(:,2) - ym(:,2)) / norm(y_(:,2) - mean(y_(:,2))));
+    fprintf('Fit: alpha = %.2f%%, omega = %.2f%%\n', fit_alpha, fit_omega);
+end
+if (true)
+    figure(1)
+    subplot(2,1,1)
+    stairs(tm_sim,[y_(:,1) ym(:,1)])
+    legend('Real','Simulation')
+    subplot(2,1,2)
+    stairs(tm_sim,[y_(:,2) ym(:,2)])
+    legend('Real','Simulation')
+end
+
+
+
+
+
+
