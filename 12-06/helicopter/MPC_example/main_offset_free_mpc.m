@@ -6,8 +6,8 @@ dt = 2.0;
 n_x = size(A_d,1); n_u = size(B_d,2); n_y = n_x;
 
 
-addpath(genpath('C:\Users\lcaric\helicopter\yalmip\YALMIP-master'));
-% addpath(genpath('C:\TUDelft\Q4\sedumi-master'));
+addpath(genpath('C:\TUDelft\Q4\YALMIP-master'));
+addpath(genpath('C:\TUDelft\Q4\sedumi-master'));
 
 
 Q = diag([10,10,10, 1,1,1]);

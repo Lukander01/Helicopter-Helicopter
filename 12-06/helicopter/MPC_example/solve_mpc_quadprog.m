@@ -42,8 +42,7 @@ function [x_bar, u_bar] = solve_mpc_quadprog(A, B, Q, R, P, x0, N, rho, x_ref, u
     x_N_shift = E_N * T * x0 - x_ref;
 
     % Terminal quad constraint: (x_N - x_ref)' * P * (x_N - x_ref) <= rho
-    % We'll relax this using a penalty (soft constraint or ellipsoidal terminal set)
-    % For now we exclude it from hard constraints in quadprog
+
 
     % Combine constraints
     A_qp = [G_u; A_x];
