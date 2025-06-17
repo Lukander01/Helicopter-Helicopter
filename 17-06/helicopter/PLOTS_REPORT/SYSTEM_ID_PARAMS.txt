@@ -1,0 +1,35 @@
+DOWN:
+Try 1:
+Initial guess:    b=2.00  K1=-10.00  K3=0.01  K4=5.000
+Estimated params: b=0.1356  K1=-10.2834  K3=0.0001  K4=4.4685
+Final cost (error): 2007868.786634
+
+Best init params: b=2.0000  K1=-10.0000  K3=0.0100  K4=5.0000
+
+Best params: b=0.1356  K1=-10.2834  K3=0.0001  K4=4.4685
+Fit
+Fit for alpha: 88.88 %
+Fit for omega: 66.54 %
+
+
+UP:
+Try 1:
+Initial guess:    b=2.00  K1=-10.00  K3=1.00  K4=1.430
+Estimated params: b=0.0228  K1=-10.6027  K3=-0.0000  K4=5.2241
+Final cost (error): 5761680.574972
+
+Best init params: b=2.0000  K1=-10.0000  K3=1.0000  K4=1.4300
+
+Best params: b=0.0228  K1=-10.6027  K3=-0.0000  K4=5.2241
+Fit
+Fit for alpha: 86.59 %
+Fit for omega: 62.15 %
+
+SIN UP:
+
+Best init params: b=2.0000  K1=-10.0000  K3=1.0000  K4=5.0000
+
+Best params: b=0.1309  K1=-10.1274  K3=0.0001  K4=3.9942
+Fit
+Fit for alpha: 88.36 %
+Fit for omega: 71.79 %

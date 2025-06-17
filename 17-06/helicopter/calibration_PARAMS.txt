@@ -1,0 +1,50 @@
+
+Steady U: -0.20
+Steady alpha: -0.09 % 0.07
+Steady omega: -130.75>> 
+
+Steady U: -0.40
+Steady alpha: -0.22
+Steady omega: -203.99>> 
+
+Steady U: -0.60
+Steady alpha: -0.37
+Steady omega: -259.50>> 
+
+
+Steady U: -0.80
+Steady alpha: -0.52 %-0.49
+Steady omega: -301.68>> 
+
+Steady U: -1.00
+Steady alpha: -0.65
+Steady omega: -335.03>> 
+
+
+Steady U: 0.20
+Steady alpha: 0.04
+Steady omega: 128.82>> 
+
+
+Steady U: 0.40
+Steady alpha: 0.10
+Steady omega: 208.47>> 
+
+
+Steady U: 0.60
+Steady alpha: 0.16
+Steady omega: 263.25>> 
+
+Steady U: 0.80
+Steady alpha: 0.22
+Steady omega: 306.39>> 
+
+Steady U: 1.00
+Steady alpha: 0.29
+Steady omega: 337.07>>  % 341
+
+
+previous:
+246.9*u*u + 584.4*u- 7.464
+
+-256.8 *u*u +600.1*u+6.35
